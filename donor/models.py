@@ -39,7 +39,7 @@ class UserModel(models.Model):
 class DonationRequestModel(models.Model):
     donor=models.ForeignKey(UserModel,on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
-    email=models.CharField(max_length=50,unique=True)
+    email=models.CharField(max_length=50)
     phone=models.CharField(max_length=20)
     disease=models.TextField()
     location=models.CharField(max_length=50)

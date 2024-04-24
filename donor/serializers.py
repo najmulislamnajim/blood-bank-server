@@ -59,7 +59,7 @@ class UserSerializer(serializers.ModelSerializer):
         
         token=default_token_generator.make_token(user)
         uid=urlsafe_base64_encode(force_bytes(user.pk))
-        confirm_link=f'http://127.0.0.1:8000/donor/active/{uid}/{token}'
+        confirm_link=f'https://bloodbankserver-s2p9.onrender.com/donor/active/{uid}/{token}'
         email_subject='Confirm your account.'
         body=render_to_string('confirmation.html',{'link':confirm_link})
         
