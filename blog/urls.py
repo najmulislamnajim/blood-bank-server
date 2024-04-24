@@ -6,6 +6,7 @@ router=DefaultRouter()
 
 router.register('list',views.BlogViewSet)
 router.register('latest',views.LatestBlogs,basename='latest')
+router.register('comment',views.CommentsViewSet,basename='comment')
 
 urlpatterns = [ 
     path('',include(router.urls)),
